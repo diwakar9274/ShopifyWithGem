@@ -1,0 +1,24 @@
+<table class="table table-striped mb-2">
+	<tr>
+		<th>Order Number</th>
+		<th>Order Id</th>
+		<th>Current_total_tax</th>
+		<th>Email</th>
+		<th>Financial_status</th>
+		<th>Total_price_usd</th>
+		<th>Total_tax</th>
+		<th>Total_price</th>
+	</tr>
+	<% @orders.each do |order| %>
+	<tr>
+		<td><%= order.number %></td>
+		<td><%= order.id %></td>
+		<td><%= order.current_total_tax %></td>
+		<td><%= order.email %></td>
+		<td><%= order.financial_status %></td>
+		<td><%= order.total_price_usd %></td>
+		<td><%= order.total_tax %></td>
+		<td><%= order.total_price %></td>
+	</tr>
+	<% end %>
+</table>

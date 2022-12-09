@@ -1,7 +1,5 @@
 class ProductsController < ApplicationController
 	def index
-		shopify = set_shopify_url
-		res = JSON.parse shopify.get('products.json').body.gsub('=>', ':')
-		@products = res["products"]
+		@products = Product.search_product(params[:query])
 	end
 end
